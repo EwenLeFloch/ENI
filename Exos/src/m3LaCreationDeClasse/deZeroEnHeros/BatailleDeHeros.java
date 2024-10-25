@@ -44,5 +44,33 @@ public class BatailleDeHeros {
 		 *  - critique (int) --> au moment de l'attaque, si le nombre aleatoire tiré est inférieur au critique, les degats sont doublés
 		 * __________________________________________________
 		 */
+		
+		Heros heros1 = new Heros("Hercule", 100, 10, 20, 5, 10, 30 );
+		Heros heros2 = new Heros("Quasimodo", 20, 2, 10, 3, 5, 15);
+		afficherEtat(heros1, heros2);
+		
+		while (heros1.estVivant() && heros2.estVivant()) {
+			if (heros1.getVitesse() > heros2.getVitesse())
+				premiereAttaque(heros1, heros2);
+			else {
+				premiereAttaque(heros2, heros1);
+			}
+			
+		}
+		System.out.println("#################################");
+		System.out.println("Fin de l'affrontement ! " + (heros1.estVivant() ? heros1.getName() : heros2.getName()) + " est le VAINQUEUR !!!");
+		
+	}
+	private static void afficherEtat(Heros heros1, Heros heros2) {
+		System.out.println(heros1);
+		System.out.println(heros2);
+	}
+	private static void premiereAttaque(Heros herosRapide, Heros herosLent) {
+		herosRapide.attaquer(herosLent);
+		afficherEtat(herosRapide, herosLent);
+		if (herosLent.estVivant()) {
+			herosLent.attaquer(herosRapide);
+			afficherEtat(herosRapide, herosLent);
+		}
 	}
 }
