@@ -1,0 +1,8 @@
+package fr.eni.quelmedecin.exception;
+
+public class UtilisateurException extends Exception {
+	public UtilisateurException() {
+		
+	}
+
+}

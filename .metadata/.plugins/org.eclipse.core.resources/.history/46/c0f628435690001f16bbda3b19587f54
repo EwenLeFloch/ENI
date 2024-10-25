@@ -1,0 +1,60 @@
+package fr.eni.quelmedecin.bo;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Medecin extends Personne {
+	List<Creneau> creneaux = new ArrayList<Creneau>();
+
+	public Medecin(String nom, String prenom, String telephone, Adresse adresse) {
+		super(nom, prenom, telephone, adresse);
+	}
+
+	public List<Creneau> getCreneaux() {
+		return Collections.unmodifiableList(creneaux);
+	}
+
+	public void addCreneau(Creneau creneau) {
+		if (creneaux.size() < 15)
+			creneaux.add(creneau);
+	}
+
+//	public void afficher() {
+//		super.afficher();
+//	}
+	@Override
+	public String toString() {
+		String afficher = super.toString();
+		
+		
+
+		return afficher;
+	}
+
+	public String afficherCreneaux() {
+		String afficher = "";
+		
+		if (creneaux.isEmpty()) {
+			afficher += "Aucun créneau";
+			return afficher;
+		}
+			
+		for (Creneau creneau : creneaux) {
+
+			afficher += creneau.toString();
+
+		}
+
+		return "Créneaux : " + afficher;
+
+		
+	}
+
+	public int getTarif() {
+		return 0;
+	}
+
+	public void setTarif(int tarif) {
+	}
+}

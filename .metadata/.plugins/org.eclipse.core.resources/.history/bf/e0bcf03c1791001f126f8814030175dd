@@ -1,0 +1,13 @@
+
+public class TesterExceptions {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		testerIndexOutOfBounds(2);
+	}
+	private static void testerIndexOutOfBounds(int index) {
+		int[] entiers = {1, 5, 8};
+		System.out.println(entiers[index]);
+	}
+
+}

@@ -1,0 +1,13 @@
+package bo;
+
+public class Animal {
+	private String nom;
+	private String repasPrefere;
+	
+	public Animal(String nom, String repasPrefere) {
+		this.nom = nom;
+		this.repasPrefere = repasPrefere;
+	}
+	
+	
+}

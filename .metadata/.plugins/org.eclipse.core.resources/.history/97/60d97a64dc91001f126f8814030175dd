@@ -1,0 +1,24 @@
+package bo;
+
+public enum Couleur {
+	BLEU("0000FF", "0,0,255", "blue"),
+	ROUGE,
+	VERT,
+	BLANC,
+	NOIR,
+	JAUNE,
+	CYAN,
+	MAGENTA;
+	
+	private String hexa;
+	private String rgb;
+	private String nom;
+	
+	private Couleur(String hexa, String rgb, String nom) {
+		this.hexa = hexa;
+		this.rgb = rgb;
+		this.nom = nom;
+	}
+	
+	
+}

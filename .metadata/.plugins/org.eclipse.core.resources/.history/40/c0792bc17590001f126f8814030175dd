@@ -1,0 +1,63 @@
+package fr.eni.quelmedecin.bo;
+
+import java.util.Comparator;
+
+public class MedecinSpecialiste extends Medecin implements Comparable{
+	private int tarif;
+	private String specialite;
+
+	public MedecinSpecialiste(String nom, String prenom, String telephone, Adresse adresse, String specialite,
+			int tarif) {
+		super(nom, prenom, telephone, adresse);
+		this.specialite = specialite;
+		this.tarif = tarif;
+	}
+	
+
+public MedecinSpecialiste(String nom, String prenom, String telephone, Adresse adresse) {
+		super(nom, prenom, telephone, adresse);
+	}
+
+
+//	public void afficher() {
+//		super.afficher();
+//		System.out.println("Spécialité : " + specialite);
+//		System.out.println("Tarif : " + tarif + "€");
+//	}
+	
+	@Override
+	public String recupererDomaine() {
+		return "spécialiste";
+	}
+	@Override
+	public String toString() {
+		String afficher = super.toString();
+		afficher += "Spécialité : " + specialite;
+		return afficher;
+	}
+
+	public String getSpecialite() {
+		return specialite;
+	}
+
+	public void setSpecialite(String specialite) {
+		this.specialite = specialite;
+	}
+
+	@Override
+	public int getTarif() {
+		return tarif;
+	}
+
+	public void setTarif(int tarif) {
+		this.tarif = tarif;
+	}
+
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

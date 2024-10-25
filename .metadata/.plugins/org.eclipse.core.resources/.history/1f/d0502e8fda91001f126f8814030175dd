@@ -1,0 +1,15 @@
+package test;
+
+import java.util.Iterator;
+
+import bo.Voiture;
+import bo.Voiture.Categorie;
+
+public class TesterVoiture {
+	public static void main(String[] args) {
+		Voiture v = new Voiture("123abc132", "Mercedes", "slk", 230);
+		v.setCategorie(Categorie.BREAK);
+		
+		System.out.println(v);
+	}
+}

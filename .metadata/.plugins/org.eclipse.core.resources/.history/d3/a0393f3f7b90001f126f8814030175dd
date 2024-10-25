@@ -1,0 +1,60 @@
+package fr.eni.quelmedecin.bo;
+
+public class MedecinGeneraliste extends Medecin {
+	private static int tarif = 25;
+
+	public MedecinGeneraliste(String nom, String prenom, String telephone, Adresse adresse) {
+		super(nom, prenom, telephone, adresse);
+	}
+
+//	public void afficher() {
+//		super.afficher();
+//		System.out.println("Tarif : " + tarif + "€");
+//	}
+	@Override
+	public String recupererDomaine() {
+		return "généraliste";
+	}
+	@Override
+	public String toString() {
+		String afficher = super.toString();
+		return afficher;
+	}
+
+	@Override
+	public int getTarif() {
+		return tarif;
+	}
+
+	public void setTarif(int tarif) {
+		MedecinGeneraliste.tarif = tarif;
+	}
+	
+
+	@Override
+	void examiner() {
+		System.out.println("Le médecin procède à des examens de routine sur les patients (auscultation, prise de tensions, ...)");
+	}
+
+	@Override
+	void diagnostiquer() {
+		System.out.println("Le médecin évalue l'état de santé du patient pour découvrir d'éventuels problèmes");
+		
+	}
+
+	@Override
+	void traiter() {
+		System.out.println("Le médecin met en place un traitement adapté");
+	}
+
+	@Override
+	void conseiller() {
+		System.out.println("Le médecin met en place un traitement adapté");
+		
+	}
+	
+	public void orienter() {
+		System.out.println("Le médecin oriente vers un spécialiste en cas de besoin");
+	}
+
+}

@@ -1,0 +1,12 @@
+package bo;
+
+public class Renard extends Animal {
+	private String couleur;
+
+	public Renard(String nom, String repasPrefere, String couleur) {
+		super(nom, repasPrefere);
+		this.couleur = couleur;
+		// TODO Auto-generated constructor stub
+	}
+	
+}

@@ -1,0 +1,51 @@
+package fr.eni.quelmedecin.bo;
+
+import java.util.*;
+
+public class MedecinGeneraliste extends Personne {
+	private static int tarif = 25;
+	List<Creneau> creneaux = new ArrayList<Creneau>();
+
+	public MedecinGeneraliste(String nom, String prenom, String telephone, Adresse adresse) {
+		super(nom, prenom, telephone, adresse);
+	}
+
+	public static int getTarif() {
+		return tarif;
+	}
+
+	public static void setTarif(int tarif) {
+		MedecinGeneraliste.tarif = tarif;
+	}
+
+	public List<Creneau> getCreneaux() {
+		return Collections.unmodifiableList(creneaux);
+	}
+
+	public void addCreneau(Creneau creneau) {
+		if (creneau.getMedecin() == this) {
+			if (creneaux.size() < 15)
+				creneaux.add(creneau);
+		}
+	}
+
+	public void afficher() {
+		super.afficher();
+		System.out.println("Tarif : " + tarif + "€");
+		
+	}
+	public void afficherAdresseEtCreneaux() {
+		System.out.println("Adresse :");
+		getAdresse().afficher();
+		System.out.println("Créneaux : ");
+		for (Creneau creneau : creneaux) {
+			if (creneau == null) {
+				System.out.println("Aucun créneau");
+			} else {
+				creneau.afficher();
+			}
+			
+		}
+	}
+
+}

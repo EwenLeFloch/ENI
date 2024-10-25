@@ -1,0 +1,10 @@
+package fr.eni.quelmedecin.exception;
+
+public class ApplicationException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package fr.eni.quelmedecin.bo;
+
+import java.util.*;
+
+import fr.eni.quelmedecin.exception.ProgrammeurException;
+
+public class GererFichiersMedicaux {
+	static List<FichierMedical> fichiersMedicaux = new ArrayList<>();
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void ajouter(FichierMedical fichierMedical) throws ProgrammeurException {
+		if (fichierMedical == null)
+			throw new ProgrammeurException("Instance de type FichierMedical non existante");
+		fichiersMedicaux.add(fichierMedical);
+	}
+	public static void afficherList() {
+		System.out.println("Fichier médical de :");
+		for (FichierMedical fichierMedical : fichiersMedicaux) {
+			fichierMedical.toString();
+		}
+	}
+
+}

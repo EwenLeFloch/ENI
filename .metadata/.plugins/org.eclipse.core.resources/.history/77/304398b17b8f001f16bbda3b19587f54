@@ -1,0 +1,46 @@
+package fr.eni.quelmedecin.bo;
+
+import java.time.LocalTime;
+
+public class Creneau {
+	private LocalTime time;
+	private int minutes;
+	private MedecinGeneraliste medecin;
+	
+	public Creneau(LocalTime time, int minutes, MedecinGeneraliste medecin) {
+		this.time = time;
+		this.minutes = minutes;
+		this.medecin = medecin;
+		afficher();
+	}
+	
+	private void afficher() {
+		System.out.println(time);
+	}
+
+	public LocalTime getTime() {
+		return time;
+	}
+
+	public void setTime(LocalTime time) {
+		this.time = time;
+	}
+
+	public int getMinutes() {
+		return minutes;
+	}
+
+	public void setMinutes(int minutes) {
+		this.minutes = minutes;
+	}
+
+	public MedecinGeneraliste getMedecin() {
+		return medecin;
+	}
+
+	public void setMedecin(MedecinGeneraliste medecin) {
+		this.medecin = medecin;
+	}
+	
+	
+}

@@ -1,0 +1,9 @@
+package fr.eni.quelmedecin.bo;
+
+public interface Soigner {
+	public abstract void examiner();
+	public abstract void diagnostiquer();
+	public abstract void traiter();
+	public abstract void conseiller();
+	public abstract void orienter();
+}

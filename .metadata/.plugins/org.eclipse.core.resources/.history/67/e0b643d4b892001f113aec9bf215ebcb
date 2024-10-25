@@ -1,0 +1,45 @@
+package m3LaCreationDeClasse.apprendreALire;
+
+public class Livre {
+	private String titre;
+	private int nombreDePage;
+	private String[] pages;
+	
+	public Livre(String titre, String[] pages) {
+		this.titre = titre;
+		this.nombreDePage = this.pages.length;
+		this.pages = pages;
+	}
+	
+	public void ajouterPages(String page) {
+		pages[nombreDePage + 1] = page;
+	}
+
+	public String getTitre() {
+		return titre;
+	}
+
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+
+	public int getNombreDePage() {
+		return nombreDePage;
+	}
+
+	public void setNombreDePage(int nombreDePage) {
+		this.nombreDePage = nombreDePage;
+	}
+
+	public String[] getPages() {
+		return pages;
+	}
+
+	public void setPages(String[] pages) {
+		this.pages = pages;
+	}
+	
+	
+	
+	
+}

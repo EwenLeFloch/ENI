@@ -1,0 +1,81 @@
+package fr.eni.quelmedecin.bo;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public abstract class Medecin extends Personne implements Soigner{
+	List<Creneau> creneaux = new ArrayList<Creneau>();
+
+	public Medecin(String nom, String prenom, String telephone, Adresse adresse) {
+		super(nom, prenom, telephone, adresse);
+	}
+
+	public void addCreneau(Creneau creneau) {
+		if (creneaux.size() < 15)
+			creneaux.add(creneau);
+	}
+
+	public String recupererDomaine() {
+		return null;
+	}
+
+//	public void afficher() {
+//		super.afficher();
+//	}
+	@Override
+	public String toString() {
+		String afficher = super.toString();
+		afficher += afficherCreneaux() + "\n";
+		afficher += "Tarif : " + getTarif() + "€\n";
+
+		return afficher;
+	}
+
+	public String afficherCreneaux() {
+		String afficher = "";
+
+		if (creneaux.isEmpty()) {
+			afficher += "Aucun créneau";
+			return afficher;
+		}
+
+		for (Creneau creneau : creneaux) {
+
+			afficher += creneau.toString();
+
+		}
+
+		return "Créneaux : \n" + afficher;
+
+	}
+	@Override
+	public void examiner() {
+		System.out.println("Le médecin procède à des examens de routine sur les patients (auscultation, prise de tensions, ...)");
+	}
+
+	@Override
+	public void diagnostiquer() {
+		System.out.println("Le médecin évalue l'état de santé du patient pour découvrir d'éventuels problèmes");
+		
+	}
+
+	@Override
+	public void traiter() {
+		System.out.println("Le médecin met en place un traitement adapté");
+	}
+
+	@Override
+	public void conseiller() {
+		System.out.println("Le médecin dispense des conseils appropriés pour des habitudes saines (régime, hygiène, etc...)");
+		
+	}
+
+	public List<Creneau> getCreneaux() {
+		return Collections.unmodifiableList(creneaux);
+	}
+
+	public abstract int getTarif();
+
+	public abstract void setTarif(int tarif);
+}

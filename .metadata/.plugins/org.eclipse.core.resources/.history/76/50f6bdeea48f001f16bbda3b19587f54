@@ -1,0 +1,15 @@
+package test;
+
+import bo.Animal;
+import bo.Renard;
+
+public class TesterAnimal {
+	public static void main(String[] args) {
+		Animal animal = new Animal("Claude le dindon", "Graine de quinoa");
+		animal.crier();
+		
+		Renard renard = new Renard("Sonic", "Anneaux", "Bleu");
+		renard.crier();
+	}
+	
+}

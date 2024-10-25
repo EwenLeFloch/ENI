@@ -1,0 +1,5 @@
+package fr.eni.quelmedecin.exception;
+
+public class ProgrammeurException {
+
+}

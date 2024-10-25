@@ -1,0 +1,26 @@
+package fr.eni.quelmedecin.bo;
+
+public enum Remboursement {
+	TFC("Tarif fixe conventionné", 100),
+	TVC("Tarif variable conventionné", 50),
+	NC("Non conventionné", 0);
+	
+	private String label;
+	private int taux;
+	
+	private Remboursement(String label, int taux) {
+		this.label = label;
+		this.taux = taux;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public int getTaux() {
+		return taux;
+	}
+	
+	
+	
+}

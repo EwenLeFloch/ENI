@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.bo.Patient"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="bo.Animal"/>
+    <fullyQualifiedTypeName name="bo.Renard"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.bo.Medecin"/>
+    <fullyQualifiedTypeName name="javax.tools.JavaCompiler"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="bo.Voiture"/>
+    <fullyQualifiedTypeName name="bo.Voiture.Categorie"/>
+    <fullyQualifiedTypeName name="bo.Couleur"/>
+    <fullyQualifiedTypeName name="bo.BoiteVitesse"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.bo.Specialite"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.bo.MedecinGeneraliste"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.bo.MedecinSpecialiste"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.bo.Remboursement"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.exception.UtilisateurException"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.exception.ProgrammeurException"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.bo.GererFichiersMedicaux"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.bo.FichierMedical"/>
+    <fullyQualifiedTypeName name="fr.eni.quelmedecin.exception.ApplicationException"/>
+</qualifiedTypeNameHistroy>

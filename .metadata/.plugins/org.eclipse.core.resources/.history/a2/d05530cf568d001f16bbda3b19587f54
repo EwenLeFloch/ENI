@@ -1,0 +1,25 @@
+package eni.association.bidirectionnelle;
+
+import java.util.*;
+
+public class Magasin {
+	private String name;
+	List<Article> articles = new ArrayList<Article>();
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<Article> getArticles() {
+		return articles;
+	}
+
+	public void setArticles(List<Article> articles) {
+		this.articles = articles;
+	}
+
+}

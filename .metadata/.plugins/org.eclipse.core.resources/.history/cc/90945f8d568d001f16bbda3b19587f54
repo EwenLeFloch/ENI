@@ -1,0 +1,5 @@
+package eni.association.bidirectionnelle;
+
+public class Article {
+
+}

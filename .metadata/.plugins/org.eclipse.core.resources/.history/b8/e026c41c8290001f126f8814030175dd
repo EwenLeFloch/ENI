@@ -1,0 +1,63 @@
+package fr.eni.quelmedecin.bo;
+
+public abstract class Personne {
+	private String nom;
+	private String prenom;
+	private String telephone;
+	private Adresse adresse;
+	private Comparator<Personne> = new Comparator;
+
+	public Personne(String nom, String prenom, String telephone, Adresse adresse) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.telephone = telephone;
+		this.adresse = adresse;
+	}
+
+//	public void afficher() {
+//		System.out.println(nom.toUpperCase() + " " + prenom);
+//		System.out.println("Téléphone : " + telephone);
+//		System.out.println("Adresse :");
+//		getAdresse().afficher();
+//	}
+	@Override
+	public String toString() {
+		String afficher = getNom() + " " + getPrenom() + "\n";
+		afficher += "Téléphone : " + getTelephone() + "\n";
+		afficher += "Adresse : " + getAdresse().toString() + "\n";
+		return afficher;
+	}
+
+	public String getNom() {
+		return nom.toUpperCase();
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
+	public Adresse getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
+	}
+
+}

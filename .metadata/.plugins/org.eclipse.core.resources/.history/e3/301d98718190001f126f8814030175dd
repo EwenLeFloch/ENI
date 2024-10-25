@@ -1,0 +1,22 @@
+package fr.eni.quelmedecin.bo;
+
+import java.util.Comparator;
+
+public class comparatorNomPrenomCroissant implements Comparator<Personne> {
+
+
+	@Override
+	public int compare(Personne p1, Personne p2) {
+		// TODO Auto-generated method stub
+		String nomPrenom1 = p1.getNom()+p1.getPrenom();
+		String nomPrenom2 = p2.getNom()+p2.getPrenom();
+		if( nomPrenom1 == nomPrenom2 )
+            return 0;
+        if( nomPrenom1 == null )
+            return 1;
+        if( nomPrenom2 == null )
+            return -1;
+        return nomPrenom1.compareTo( nomPrenom2 );
+	}
+
+}

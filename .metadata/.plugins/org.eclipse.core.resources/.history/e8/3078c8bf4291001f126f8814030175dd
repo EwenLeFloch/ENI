@@ -1,0 +1,7 @@
+package fr.eni.quelmedecin.exception;
+
+public class ProgrammeurException extends Exception{
+	public UtilisateurException(String message) {
+		super(message);
+	}
+}

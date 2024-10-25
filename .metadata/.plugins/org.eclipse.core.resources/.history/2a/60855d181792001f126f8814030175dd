@@ -1,0 +1,16 @@
+package fr.eni.quelmedecin.bo;
+
+import java.util.*;
+
+public class GererFichiersMedicaux {
+	List<T> fichiersMedicaux = ArrayList<T>();
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void ajouter() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

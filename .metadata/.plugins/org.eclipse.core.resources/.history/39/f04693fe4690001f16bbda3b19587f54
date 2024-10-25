@@ -1,0 +1,78 @@
+package fr.eni.quelmedecin.bo;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+public class Patient extends Personne{
+	private char sexe;
+	private long numSecu;
+	private LocalDate ddn;
+	private String commentaires;
+
+	public Patient(String nom, String prenom, String telephone, char sexe, long numSecu, LocalDate ddn,
+			String commentaires, Adresse adresse) {
+		super(nom, prenom, telephone, adresse);
+		this.sexe = sexe;
+		this.numSecu = numSecu;
+		this.ddn = ddn;
+		this.commentaires = commentaires;
+	}
+
+//	public void afficher() {
+//		var dtf = DateTimeFormatter.ofPattern("d MMMM Y", Locale.FRENCH);
+//		super.afficher();
+//		System.out.println("Sexe : " + this.getSexe());
+//		System.out.println("Numéro de sécurité sociale : " + numSecu);
+//		System.out.println("Date de naissance : " + ddn.format(dtf));
+//		System.out.println("Commentaires : " + (commentaires != null ? commentaires : "[aucun commentaire]"));
+//	}
+	
+	@Override
+	public String toString() {
+		super.toString()
+;		var dtf = DateTimeFormatter.ofPattern("d MMMM Y", Locale.FRENCH);
+		String afficher = "Sexe : " + this.getSexe();
+		afficher += "Numéro de sécurité sociale : " + numSecu;
+		afficher += "Date de naissance : " + ddn.format(dtf);
+		afficher += "Commentaires : " + (commentaires != null ? commentaires : "[aucun commentaire]");
+		return afficher;
+	}
+
+	public String getSexe() {
+		if (sexe == 'F') {
+			return "Féminin";
+		} else
+			return "Masculin";
+	}
+
+	public void setSexe(char sexe) {
+		this.sexe = sexe;
+	}
+
+	public long getNumSecu() {
+		return numSecu;
+	}
+
+	public void setNumSecu(long numSecu) {
+		this.numSecu = numSecu;
+	}
+
+	public LocalDate getDdn() {
+		return ddn;
+	}
+
+	public void setDdn(LocalDate ddn) {
+		this.ddn = ddn;
+	}
+
+	public String getCommentaires() {
+
+		return commentaires;
+	}
+
+	public void setCommentaires(String commentaires) {
+		this.commentaires = commentaires;
+	}
+
+}

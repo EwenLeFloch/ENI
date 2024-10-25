@@ -1,0 +1,23 @@
+package fr.eni.quelmedecin.bo;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class RendezVous {
+	private Creneau creneau;
+	private Patient patient;
+	private LocalDate date;
+	private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd mmmm Y");
+	
+	public RendezVous(Creneau creneau, Patient patient, LocalDate date) {
+		this.creneau = creneau;
+		this.patient = patient;
+		this.date = date;
+	}
+	
+	public void afficher() {
+		System.out.println("Rendez-vous du "+date.format(formatter));
+	}
+	
+
+}

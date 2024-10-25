@@ -1,0 +1,109 @@
+package fr.eni.quelmedecin.bo;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+public class Patient {
+	private String nom;
+	private String prenom;
+	private String numeroDeTelephone;
+	private char sexe;
+	private long numSecu;
+	private LocalDate ddn;
+	private String commentaires;
+	private Adresse adresse;
+
+	public Patient(String nom, String prenom, String numeroDeTelephone, char sexe, long numSecu, LocalDate ddn,
+			String commentaires, Adresse adresse) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.numeroDeTelephone = numeroDeTelephone;
+		this.sexe = sexe;
+		this.numSecu = numSecu;
+		this.ddn = ddn;
+		this.commentaires = commentaires;
+		this.adresse = adresse;
+	}
+
+	public void afficher() {
+		var dtf = DateTimeFormatter.ofPattern("d MMMM Y", Locale.FRENCH);
+		System.out.println(this.getNom()+" "+prenom);
+		System.out.println("Téléphone : "+numeroDeTelephone);
+		System.out.println("Sexe : "+this.getSexe());
+		System.out.println("Numéro de sécurité sociale : "+numSecu);
+		System.out.println("Date de naissance : " + ddn.format(dtf));
+		System.out.println("Commentaires : "+(commentaires != null ? commentaires : "[aucun commentaire]"));
+		System.out.println("Adresse :");
+		getAdresse()
+.afficher()	}
+
+	public String getNom() {
+		return nom.toUpperCase();
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getNumeroDeTelephone() {
+		return numeroDeTelephone;
+	}
+
+	public void setNumeroDeTelephone(String numeroDeTelephone) {
+		this.numeroDeTelephone = numeroDeTelephone;
+	}
+
+	public String getSexe() {
+		if (sexe == 'F') {
+			return "Féminin";
+		} else
+			return "Masculin";
+	}
+
+	public void setSexe(char sexe) {
+		this.sexe = sexe;
+	}
+
+	public long getNumSecu() {
+		return numSecu;
+	}
+
+	public void setNumSecu(long numSecu) {
+		this.numSecu = numSecu;
+	}
+
+	public LocalDate getDdn() {
+		return ddn;
+	}
+
+	public void setDdn(LocalDate ddn) {
+		this.ddn = ddn;
+	}
+
+	public String getCommentaires() {
+
+		return commentaires;
+	}
+
+	public void setCommentaires(String commentaires) {
+		this.commentaires = commentaires;
+	}
+
+	public Adresse getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
+	}
+
+}

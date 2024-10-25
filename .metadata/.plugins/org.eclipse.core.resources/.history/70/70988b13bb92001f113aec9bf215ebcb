@@ -1,0 +1,58 @@
+package m3LaCreationDeClasse.apprendreALire;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Livre {
+	List<String> pages = new ArrayList<>();
+	private String titre;
+	private int nombreDePages;
+	
+	public Livre(String titre, ArrayList<String> pages) {
+		this.titre = titre;
+		this.pages = pages;
+		this.nombreDePages = this.pages.size();
+	}
+	
+	public void ajouterPages(String page) {
+		pages.add(page);
+	}
+	public void consulterPage(int numéroDePage) {
+		System.out.println(pages);
+	}
+	@Override
+	public String toString() {
+		String infos = titre;
+		for (String page : pages) {
+			infos += page + "\n" + nombreDePages;
+		}
+		return infos;
+	}
+	public String getTitre() {
+		return titre;
+	}
+
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+
+	public int getNombreDePages() {
+		return nombreDePages;
+	}
+
+	public void setNombreDePages(int nombreDePage) {
+		this.nombreDePages = nombreDePage;
+	}
+
+	public List<String> getPages() {
+		return pages;
+	}
+
+	public void setPages(List<String> pages) {
+		this.pages = pages;
+	}
+	
+	
+	
+	
+}

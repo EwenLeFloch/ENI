@@ -1,0 +1,64 @@
+package fr.eni.quelmedecin.bo;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import fr.eni.quelmedecin.exception.ProgrammeurException;
+import fr.eni.quelmedecin.exception.UtilisateurException;
+
+public abstract class Medecin extends Personne implements Soigner {
+	List<Creneau> creneaux = new ArrayList<Creneau>();
+
+	public Medecin(String nom, String prenom, String telephone, Adresse adresse) throws UtilisateurException, ProgrammeurException {
+		super(nom, prenom, telephone, adresse);
+	}
+
+	public void addCreneau(Creneau creneau) throws UtilisateurException {
+		if (creneaux.size() >= 15)
+			throw new UtilisateurException("Trop de créneaux sont affectés à ce médecin");
+			creneaux.add(creneau);
+	}
+
+	public String recupererDomaine() {
+		return null;
+	}
+
+//	public void afficher() {
+//		super.afficher();
+//	}
+	@Override
+	public String toString() {
+		String afficher = super.toString();
+		afficher += afficherCreneaux() + "\n";
+		afficher += "Tarif : " + getTarif() + "€\n";
+
+		return afficher;
+	}
+
+	public String afficherCreneaux() {
+		String afficher = "";
+
+		if (creneaux.isEmpty()) {
+			afficher += "Aucun créneau";
+			return afficher;
+		}
+
+		for (Creneau creneau : creneaux) {
+
+			afficher += creneau.toString();
+
+		}
+
+		return "Créneaux : \n" + afficher;
+
+	}
+
+	public List<Creneau> getCreneaux() {
+		return Collections.unmodifiableList(creneaux);
+	}
+
+	public abstract int getTarif();
+
+	public abstract void setTarif(int tarif) throws UtilisateurException;
+}

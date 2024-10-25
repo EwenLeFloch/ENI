@@ -1,0 +1,28 @@
+package fr.eni.quelmedecin.bo;
+
+import java.time.LocalDate;
+
+public class FichierMedical {
+	private int poids;
+	private int taille;
+	private String tension;
+	private int oxygenation;
+	private int pulsation;
+	private String probleme;
+	private String prescription;
+	private LocalDate dateSoin;
+	
+	public FichierMedical(int poids, int taille, String tension, int oxygenation, int pulsation, String probleme,
+			String prescription, LocalDate dateSoin, Patient patient, Medecin medecin) {
+		super(patient, medecin);
+		this.poids = poids;
+		this.taille = taille;
+		this.tension = tension;
+		this.oxygenation = oxygenation;
+		this.pulsation = pulsation;
+		this.probleme = probleme;
+		this.prescription = prescription;
+		this.dateSoin = dateSoin;
+	}
+	
+}

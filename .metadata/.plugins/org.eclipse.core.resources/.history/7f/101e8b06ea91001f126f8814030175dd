@@ -1,0 +1,29 @@
+package fr.eni.quelmedecin.bo;
+
+public enum Remboursement {
+	TFCM1("Tarif fixe conventionné", 100, 0),
+	TVCM1("Tarif variable conventionné", 50, 50),
+	NCM1("Non conventionné", 0, 0),
+	TFCM2("Tarif fixe conventionné", 100, 0),
+	TVCM2("Tarif variable conventionné", 50, 75),
+	NCM2("Non conventionné", 0, 50);
+	
+	private String libelle;
+	private int secu;
+	private int mutuelle;
+	private Remboursement(String label, int taux) {
+		this.libelle = label;
+		this.taux = taux;
+	}
+
+	public String getLibelle() {
+		return libelle;
+	}
+
+	public double getTaux() {
+		return taux/100.0;
+	}
+	
+	
+	
+}
