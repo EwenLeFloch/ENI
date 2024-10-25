@@ -1,5 +1,7 @@
 package m4LesAssociations.maillons;
 
+import java.util.Scanner;
+
 public class CreerDesChaines {
 	public static void main(String[] args) {
 		/*
@@ -23,5 +25,11 @@ public class CreerDesChaines {
 		 * 
 		 * Il s'agit d'un exercice diffile, mais intéressant pour continuer d'appréhender les associations !
 		 */
+		
+		Question firstQuestion = new Question("Est-ce que ça va fonctionner", true, null);
+		
+		System.out.println(firstQuestion.getQuestion());
+		Scanner scanner = new Scanner(System.in);
+		System.out.println(scanner == firstQuestion.isReponse() ? "Bien joué" : "T'es nul");
 	}
 }
